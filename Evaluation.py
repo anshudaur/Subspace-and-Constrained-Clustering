@@ -12,7 +12,6 @@ def readSubSpaces():
    datawithclass=pd.read_csv('preprocessedData.csv')
    #f = open("testSubspaces_outputFile.txt", "r")
    #for row in f:
-   subspaces= ['mrt_liverfat_s2', 'atc_g04c_s0', 'mrt_lower', 'mrt_mean', 'mrt_upper', 'chol_s_s2', 'som_groe_s2', 'pillnow_w_s0', 'tg_s_s1', 'heartr_s0', 'igfbp3_s0','gluc_s_s2', 'physact_s0','fs_risk_s0', 'school_s0', 'vag_chir_w_s0','il6_s0','Class']
    filterData=datawithclass[subspaces]
    labelledDF = filterData.loc[((filterData['Class']== "A") | (filterData['Class']== "B") | (filterData['Class']== "C"))]
    return labelledDF
